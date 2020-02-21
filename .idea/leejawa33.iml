@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/plus/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/plus/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/plus/vendor/beyondcode/laravel-dump-server" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/doctrine/inflector" />
@@ -13,6 +14,7 @@
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/plus/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/facade/ignition-contracts" />
