@@ -16,3 +16,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/contact', 'HomeController@contact');
 
 Route::get('/projects', 'ProjectController@index');
+
+Route::get('/task', 'TaskController@index');
+Route::get('/task/create', 'TaskController@create');

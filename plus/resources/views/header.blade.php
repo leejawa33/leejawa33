@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title><?=$title?></title>
 
-        <link href="{{mix('css/tailwind.css')}}">
+        <link rel="stylesheet" href="{{mix('css/tailwind.css')}}">
 
     </head>
     <body>

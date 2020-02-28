@@ -2,11 +2,9 @@
 
 <table class="bg-green-900">
     <tr>
-        <th colspan="23">
-            <div >
-                @yield('print')
-            </div>
-        </th>
+        <div class="container mx-auto">
+            @yield('print')
+        </div>
     </tr>
     <tr>
         <th><?=$str_temp?></th>
