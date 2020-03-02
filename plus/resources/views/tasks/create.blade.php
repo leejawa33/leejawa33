@@ -3,16 +3,19 @@
 @extends('layout', ['str_temp' => '오예'])
 
 @section('print')
-    <h1 class="font-bold">create Tasks</h1>create Tasks<br>
+    <h1 class="font-bold">create Tasks</h1>
+    <div>
+        <form action="/task" method="post">
+            @csrf
+            <label for="title" class="block">title</label>
+            <input name="title" id="title" type="text" class="border border-gray-800 w-full">
 
-    <form action="/tasks/store" method="post">
-        <label for="title" class="block">title</label>
-        <input name="title" id="title" type="text" class="border border-gray-800">
+            <label for="body" class="block">body</label>
+            <textarea name="body" id="body" class="border border-gray-800 w-full"></textarea>
+            <br>
 
-        <label for="body" class="block">body</label>
-        <textarea name="body" id="body" class="border border-gray-800"></textarea>
-        <br>
+            <button class="bg-blue-600 text-white px-4 py-2 float-right">submit</button>
+        </form>
+    </div>
 
-        <button class="bg-blue-800">submit</button>
-    </form>
 @endsection

@@ -19,3 +19,6 @@ Route::get('/projects', 'ProjectController@index');
 
 Route::get('/task', 'TaskController@index');
 Route::get('/task/create', 'TaskController@create');
+
+
+Route::post('/task', 'TaskController@store');
