@@ -6,7 +6,11 @@
     <h1 class="font-bold">Tasks index</h1>
     <ul>
         @foreach($tasks as $task)
-            <li>{{$task->title}} {{$task->created_at}}</li>
+            <a href="/tasks/{{$task->id}}">
+                <li class="border my-3 p-3">
+                    {{$task->title}} {{$task->created_at}}
+                </li>
+            </a>
         @endforeach
     </ul>
 @endsection

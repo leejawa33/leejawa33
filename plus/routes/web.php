@@ -17,8 +17,14 @@ Route::get('/contact', 'HomeController@contact');
 
 Route::get('/projects', 'ProjectController@index');
 
-Route::get('/task', 'TaskController@index');
-Route::get('/task/create', 'TaskController@create');
+Route::get('/tasks', 'TaskController@index');
+Route::get('/tasks/create', 'TaskController@create');
 
 
-Route::post('/task', 'TaskController@store');
+Route::post('/tasks', 'TaskController@store');
+
+Route::get('/tasks/{task}', 'TaskController@show');
+
+Route::get('/tasks/{task}/edit', 'TaskController@edit');
+
+Route::put('/tasks/{task}', 'TaskController@update');
