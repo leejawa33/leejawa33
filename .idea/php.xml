@@ -92,6 +92,7 @@
       <path value="$PROJECT_DIR$/plus/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/plus/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/plus/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/plus/vendor/caouecs/laravel-lang" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

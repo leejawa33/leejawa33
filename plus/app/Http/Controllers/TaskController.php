@@ -10,7 +10,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = Task::orderby('id', 'desc')->get();
         return view('tasks.index', [
             'tasks' => $tasks
         ]);
@@ -21,11 +21,14 @@ class TaskController extends Controller
         return view('tasks.create');
     }
 
-    public function store(Request $request)
+    public function store()
     {
+        \request()->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
         $task = Task::create([
-            'title'=>$request->input( 'title'),
-            'body' => $request->input('body')
+            \request( ['title', 'body'])
         ]);
 
         return redirect('/tasks/' .$task->id);
@@ -40,6 +43,12 @@ class TaskController extends Controller
 
     public function edit(Task $task)
     {
+
+        \request()->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
         return view('tasks.edit', [
             'task' => $task
         ]);
@@ -54,6 +63,12 @@ class TaskController extends Controller
         ]);
 
         return redirect('/tasks/'. $task->id);
+    }
+
+    public function destroy(Task $task) {
+        $task->delete();
+
+        return redirect('/tasks/');
     }
 
 }
