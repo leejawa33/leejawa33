@@ -30,3 +30,7 @@ Route::get('/tasks/{task}/edit', 'TaskController@edit');
 Route::put('/tasks/{task}', 'TaskController@update');
 
 Route::delete('/tasks/{task}', 'TaskController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -15,7 +15,6 @@
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/egulias/email-validator" />
-      <excludeFolder url="file://$MODULE_DIR$/plus/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/plus/vendor/facade/ignition-contracts" />
