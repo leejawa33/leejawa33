@@ -10,7 +10,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::orderby('id', 'desc')->get();
+        $tasks = Task::orderby('id', 'desc')->where('user_id',auth()->id())->get();
         return view('tasks.index', [
             'tasks' => $tasks
         ]);
@@ -25,16 +25,30 @@ class TaskController extends Controller
     {
         \request()->validate([
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+
         ]);
-        $task = Task::create([
-            \request( ['title', 'body'])
-        ]);
+
+        $data = \request( ['title', 'body']);
+
+        $data['user_id'] = auth()->id();
+
+        $task = Task::create($data);
+
 
         return redirect('/tasks/' .$task->id);
     }
 
     public function show(Task $task) {
+
+//        if($task->user_id != auth()->id()) {
+//            abort(403);
+//        }
+//
+//        abort_if(auth()->id() != $task->user_id. 403);
+
+        abort_if( !auth()->user()->owns($task) , 403);
+        abort_unless(auth()->user()->owns($task) , 403);
 
         return view('tasks.show', [
              'task' => $task
